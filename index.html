@@ -2,34 +2,25 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Portfolio Bryan Sangucho</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
 <style>
 
+/* RESET */
 
-@media (max-width:768px){
-
-.hero h1{
-font-size:70px;
-}
-
-.nombre{
-font-size:16px;
-}
-
-button{
-font-size:16px;
-padding:14px 28px;
-}
-
-}
-
-
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-margin:0;
 font-family:'Montserrat', sans-serif;
 background:#0f172a;
 color:white;
@@ -50,27 +41,41 @@ padding:20px;
 }
 
 .hero-content{
-color:white;
 max-width:900px;
-width:100%;
 }
 
 .nombre{
-font-size:24px;
-letter-spacing:4px;
+font-size:22px;
+letter-spacing:5px;
 margin-bottom:20px;
-font-weight:500;
 }
 
-/* TITULO GRANDE */
+/* TITULO */
 
 .hero h1{
 font-size:140px;
 font-weight:900;
-margin:0;
 line-height:1;
 display:flex;
 flex-direction:column;
+}
+
+/* ANIMACIÓN TITULO */
+
+.hero h1 span{
+opacity:0;
+transform:translateY(80px);
+animation:subir 1s forwards;
+}
+
+.hero h1 span:nth-child(2){
+animation-delay:0.3s;
+}
+
+.nombre{
+opacity:0;
+animation:fadeNombre 1s forwards;
+animation-delay:0.8s;
 }
 
 /* BOTON */
@@ -91,140 +96,142 @@ button:hover{
 background:#e2e8f0;
 }
 
-/* SECCION ANIMADA */
+/* KEYFRAMES */
 
-.intro-animada{
-background:#C31B4F;
-color:white;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
+@keyframes subir{
 
-/* titulo gigante */
-
-.intro-animada h2{
-display:flex;
-flex-direction:column;
-font-size:140px;
-font-weight:900;
-line-height:1;
-margin:0;
-}
-
-/* animacion */
-
-.intro-animada span{
+from{
 opacity:0;
 transform:translateY(80px);
-animation:subir 1s forwards;
 }
 
-.intro-animada span:nth-child(2){
-animation-delay:0.4s;
+to{
+opacity:1;
+transform:translateY(0);
 }
 
-/* nombre */
+}
 
-.intro-animada p{
-margin-top:40px;
-letter-spacing:6px;
-font-size:22px;
+@keyframes fadeNombre{
+
+from{
 opacity:0;
-animation:fadeNombre 1s forwards;
-animation-delay:0.8s;
+}
+
+to{
+opacity:1;
 }
 
 }
 
-section{
-padding:80px;
-text-align:center;
-background:#020617;
-}
-
-h2{
-font-size:35px;
-margin-bottom:20px;
-}
-
-.skills ul{
-list-style:none;
-padding:0;
-}
-
-.skills li{
-display:inline-block;
-background:#1e293b;
-padding:10px 15px;
-margin:8px;
-border-radius:6px;
-}
-/* TICKER ANIMADO */
+/* TICKER INFINITO */
 
 .ticker{
-background:#0B1B5C;   /* azul oscuro */
+background:#C31B4F;
 overflow:hidden;
 white-space:nowrap;
-width:100%;
-padding:20px 0;
+padding:18px 0;
 }
 
 .ticker-track{
-display:inline-block;
-white-space:nowrap;
-animation:scrollTicker 20s linear infinite;
+display:flex;
+width:max-content;
+animation:tickerMove 18s linear infinite;
 }
 
 .ticker span{
-color:white;
-font-weight:700;
-font-size:20px;
 margin:0 40px;
+font-weight:700;
+font-size:18px;
 letter-spacing:3px;
 }
 
-/* animación */
+@keyframes tickerMove{
 
-@keyframes scrollTicker{
-
-0%{
+from{
 transform:translateX(0);
 }
 
-100%{
+to{
 transform:translateX(-50%);
 }
 
 }
 
+/* SOBRE MI */
+
+section{
+padding:80px 20px;
+text-align:center;
+background:#020617;
+}
+
+h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.skills{
+margin-top:30px;
+}
+
+.skills li{
+display:inline-block;
+background:#1e293b;
+padding:10px 16px;
+margin:6px;
+border-radius:6px;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.hero h1{
+font-size:70px;
+}
+
+.nombre{
+font-size:16px;
+}
+
+button{
+font-size:16px;
+padding:14px 26px;
+}
+
+}
 
 </style>
-  
 
 </head>
 
 <body>
 
+
+<!-- HERO -->
+
 <header class="hero">
 
 <div class="hero-content">
 
-<p class="nombre">BRYAN ALEXIS SANGUCHO MORALES</p>
+<p class="nombre">BRYAN ALEXIS SANGUCHO</p>
 
 <h1>
 <span>PORTFOLIO</span>
 <span>2026</span>
 </h1>
 
-<button onclick="scrollToProjects()">Ver proyectos</button>
+<button>Ver proyectos</button>
 
 </div>
 
 </header>
+
+
+<!-- TICKER -->
+
 <section class="ticker">
 
 <div class="ticker-track">
@@ -232,18 +239,27 @@ transform:translateX(-50%);
 <span>PORTFOLIO</span>
 <span>2026</span>
 <span>BRYAN SANGUCHO</span>
+
 <span>PORTFOLIO</span>
 <span>2026</span>
 <span>BRYAN SANGUCHO</span>
+
 <span>PORTFOLIO</span>
 <span>2026</span>
+<span>BRYAN SANGUCHO</span>
+
+<span>PORTFOLIO</span>
+<span>2026</span>
+<span>BRYAN SANGUCHO</span>
 
 </div>
 
 </section>
 
-</section>
-  <section id="sobre-mi">
+
+<!-- SOBRE MI -->
+
+<section>
 
 <h2>Sobre mí</h2>
 
@@ -255,9 +271,8 @@ crear soluciones digitales combinando programación, diseño y experiencia de us
 
 <div class="skills">
 
-<h3>Habilidades</h3>
-
 <ul>
+
 <li>HTML</li>
 <li>CSS</li>
 <li>Java</li>
@@ -271,16 +286,7 @@ crear soluciones digitales combinando programación, diseño y experiencia de us
 </div>
 
 </section>
-  <script>
 
-function scrollToProjects(){
-document.getElementById("proyectos").scrollIntoView({
-behavior:"smooth"
-});
-}
-
-</script>
 
 </body>
-
 </html>
