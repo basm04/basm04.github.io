@@ -4,12 +4,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Portfolio Bryan Sangucho</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
+
+
+@media (max-width:768px){
+
+.hero h1{
+font-size:60px;
+}
+
+.nombre{
+font-size:18px;
+}
+
+button{
+font-size:16px;
+padding:14px 28px;
+}
+
+}
 
 body{
 margin:0;
-font-family: Arial, sans-serif;
+font-family:'Montserrat', sans-serif;
 background:#0f172a;
 color:white;
 }
@@ -18,44 +36,44 @@ color:white;
 
 .hero{
 height:100vh;
-background-image:url("fondo.png"); /* usa el nombre real de tu imagen */
+background-image:url("fondo.png");
 background-size:cover;
 background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:40px;
+padding:20px;
 }
 
-/* contenedor del texto */
 .hero-content{
 color:white;
-max-width:1200px;
+max-width:900px;
+width:100%;
 }
 
-/* tu nombre arriba */
 .nombre{
-font-size:28px;
+font-size:24px;
 letter-spacing:4px;
-margin-bottom:30px;
-opacity:0.9;
+margin-bottom:20px;
+font-weight:500;
 }
 
 /* TITULO GRANDE */
+
 .hero h1{
-font-size:140px;
-font-weight:800;
+font-size:130px;
+font-weight:900;
 margin:0;
 line-height:1.1;
-letter-spacing:3px;
 }
 
 /* BOTON */
+
 button{
-margin-top:60px;
-padding:18px 38px;
-font-size:20px;
+margin-top:50px;
+padding:16px 36px;
+font-size:18px;
 border:none;
 border-radius:10px;
 background:white;
@@ -91,6 +109,7 @@ padding:10px 15px;
 margin:8px;
 border-radius:6px;
 }
+
 
 </style>
   
