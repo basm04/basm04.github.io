@@ -15,42 +15,47 @@ color:white;
 }
 
 header{
+.hero{
 height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-
 background-image:url("fondo.png");
 background-size:cover;
 background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
-h1{
-font-size:70px;
+.hero-content{
 color:white;
-letter-spacing:3px;
 }
 
-p{
-font-size:22px;
-color:white;
+.nombre{
+font-size:20px;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:90px;
+font-weight:bold;
+margin:0;
 }
 
 button{
-margin-top:30px;
-padding:12px 25px;
+margin-top:40px;
+padding:14px 30px;
+font-size:18px;
 border:none;
 border-radius:8px;
-background:#38bdf8;
-color:white;
-font-size:16px;
+background:white;
+color:black;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-background:#0ea5e9;
+background:#e2e8f0;
 }
   section{
 padding:80px;
@@ -83,15 +88,17 @@ border-radius:6px;
 
 <body>
 
-<header>
+<header class="hero">
 
-<h1>Bryan Alexis Sangucho</h1>
+<div class="hero-content">
 
-<p>Desarrollador y Diseñador Digital</p>
+<p class="nombre">Bryan Alexis Sangucho</p>
 
-<p>Creo páginas web, apps y experiencias digitales.</p>
+<h1>PORTFOLIO 2026</h1>
 
-<button>Ver proyectos</button>
+<button onclick="scrollToProjects()">Ver proyectos</button>
+
+</div>
 
 </header>
   <section id="sobre-mi">
