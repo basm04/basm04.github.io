@@ -23,14 +23,6 @@ font-size:16px;
 padding:14px 28px;
 }
 
-.intro-animada h2{
-font-size:70px;
-}
-
-.intro-animada p{
-font-size:16px;
-}
-
 }
 
 
@@ -146,32 +138,6 @@ animation:fadeNombre 1s forwards;
 animation-delay:0.8s;
 }
 
-@keyframes subir{
-
-0%{
-opacity:0;
-transform:translateY(80px);
-}
-
-100%{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-@keyframes fadeNombre{
-
-0%{
-opacity:0;
-transform:translateY(-20px);
-}
-
-100%{
-opacity:1;
-transform:translateY(0);
-}
-
 }
 
 section{
@@ -196,6 +162,43 @@ background:#1e293b;
 padding:10px 15px;
 margin:8px;
 border-radius:6px;
+}
+/* TICKER ANIMADO */
+
+.ticker{
+background:#0B1B5C;   /* azul oscuro */
+overflow:hidden;
+white-space:nowrap;
+width:100%;
+padding:20px 0;
+}
+
+.ticker-track{
+display:inline-block;
+white-space:nowrap;
+animation:scrollTicker 20s linear infinite;
+}
+
+.ticker span{
+color:white;
+font-weight:700;
+font-size:20px;
+margin:0 40px;
+letter-spacing:3px;
+}
+
+/* animación */
+
+@keyframes scrollTicker{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
 }
 
 
@@ -222,14 +225,22 @@ border-radius:6px;
 </div>
 
 </header>
-<section class="intro-animada">
+<section class="ticker">
 
-<h2>
+<div class="ticker-track">
+
 <span>PORTFOLIO</span>
 <span>2026</span>
-</h2>
+<span>BRYAN SANGUCHO</span>
+<span>PORTFOLIO</span>
+<span>2026</span>
+<span>BRYAN SANGUCHO</span>
+<span>PORTFOLIO</span>
+<span>2026</span>
 
-<p>BRYAN SANGUCHO</p>
+</div>
+
+</section>
 
 </section>
   <section id="sobre-mi">
