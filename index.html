@@ -23,7 +23,16 @@ font-size:16px;
 padding:14px 28px;
 }
 
+.intro-animada h2{
+font-size:70px;
 }
+
+.intro-animada p{
+font-size:16px;
+}
+
+}
+
 
 }
 
@@ -90,6 +99,81 @@ button:hover{
 background:#e2e8f0;
 }
 
+/* SECCION ANIMADA */
+
+.intro-animada{
+background:#C31B4F;
+color:white;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+/* titulo gigante */
+
+.intro-animada h2{
+display:flex;
+flex-direction:column;
+font-size:140px;
+font-weight:900;
+line-height:1;
+margin:0;
+}
+
+/* animacion */
+
+.intro-animada span{
+opacity:0;
+transform:translateY(80px);
+animation:subir 1s forwards;
+}
+
+.intro-animada span:nth-child(2){
+animation-delay:0.4s;
+}
+
+/* nombre */
+
+.intro-animada p{
+margin-top:40px;
+letter-spacing:6px;
+font-size:22px;
+opacity:0;
+animation:fadeNombre 1s forwards;
+animation-delay:0.8s;
+}
+
+@keyframes subir{
+
+0%{
+opacity:0;
+transform:translateY(80px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeNombre{
+
+0%{
+opacity:0;
+transform:translateY(-20px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
 section{
 padding:80px;
 text-align:center;
@@ -138,6 +222,16 @@ border-radius:6px;
 </div>
 
 </header>
+<section class="intro-animada">
+
+<h2>
+<span>PORTFOLIO</span>
+<span>2026</span>
+</h2>
+
+<p>BRYAN SANGUCHO</p>
+
+</section>
   <section id="sobre-mi">
 
 <h2>Sobre mí</h2>
