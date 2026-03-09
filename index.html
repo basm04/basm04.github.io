@@ -222,7 +222,8 @@ align-items:center;
 }
 
 .about-img img{
-width:100%;
+width:320px;
+max-width:100%;
 border-radius:20px;
 }
 
@@ -238,32 +239,47 @@ margin-bottom:30px;
 
 /* CONTACT */
 
-.contact{
-margin-bottom:40px;
+.contact h3{
+font-size:28px;
+margin-top:30px;
 }
 
 .contact a{
 display:block;
-color:white;
+margin-top:10px;
+color:#000;
 text-decoration:none;
-margin:8px 0;
 font-size:18px;
+}
+
+.contact a:hover{
+text-decoration:underline;
+}
+.about-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:80px;
+max-width:1200px;
+margin:auto;
+flex-wrap:wrap;
 }
 
 /* SKILLS */
 
 .skills-icons{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
+display:grid;
+grid-template-columns:repeat(4,60px);
+gap:20px;
+justify-content:center;
+margin-top:30px;
 }
 
 .skills-icons img{
-width:55px;
-height:55px;
-background:#1e293b;
-padding:10px;
-border-radius:10px;
+width:50px;
+height:50px;
+object-fit:contain;
+background:none;
 }
 
 /* MOBILE */
@@ -348,6 +364,23 @@ justify-content:center;
 
 <div class="about-img">
 <img src="img/foto.png" alt="Bryan Sangucho">
+<div class="skills">
+
+<h3>Habilidades</h3>
+
+<div class="skills-icons">
+
+<img src="icons/html.png">
+<img src="icons/css.png">
+<img src="icons/java.png">
+<img src="icons/illustrator.png">
+
+<img src="icons/photoshop.png">
+<img src="icons/indesign.png">
+<img src="icons/premiere.png">
+
+</div>
+</div>
 </div>
 
 <div class="about-text">
@@ -367,24 +400,6 @@ crear soluciones digitales combinando programación, diseño y experiencia de us
 <a href="tel:+34691812922">📞 +34 691 81 29 22</a>
 
 <a href="mailto:44alexis@hotmail.es">✉ 44alexis@hotmail.es</a>
-
-</div>
-
-<div class="skills">
-
-<h3>Habilidades</h3>
-
-<div class="skills-icons">
-
-<img src="icons/html.png">
-<img src="icons/css.png">
-<img src="icons/java.png">
-<img src="icons/illustrator.png">
-<img src="icons/photoshop.png">
-<img src="icons/indesign.png">
-<img src="icons/premiere.png">
-
-</div>
 
 </div>
 
