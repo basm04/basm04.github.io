@@ -247,34 +247,47 @@ font-size:14px;
 letter-spacing:3px;
 }
 
-/* layout columna única */
+/* una sola columna */
 
 .about-container{
 grid-template-columns:1fr;
+gap:60px;
 text-align:center;
 }
 
-/* centrar texto derecha */
+/* centrar columna izquierda */
+
+.about-left{
+align-items:center;
+}
+
+/* centrar títulos */
+
+.about-left h2{
+text-align:center;
+}
 
 .about-right{
 text-align:center;
+max-width:100%;
 }
 
-/* centrar título habilidades */
-
-.about-left h2{
+.about-right h2{
 text-align:center;
 }
 
 /* centrar iconos */
 
 .skills-icons{
-display:grid;
 grid-template-columns:repeat(4,60px);
-gap:20px;
 justify-content:center;
 justify-items:center;
-margin:25px auto;
+}
+
+/* centrar foto */
+
+.about-photo{
+margin:0 auto 40px auto;
 }
 
 }
