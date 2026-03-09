@@ -160,126 +160,68 @@ transform:translateX(-50%);
 
 /* SOBRE MI */
 
-section{
-padding:80px 20px;
-text-align:center;
-background:#020617;
-}
-
-h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
-.skills{
-margin-top:30px;
-}
-
-.skills li{
-display:inline-block;
-background:#1e293b;
-padding:10px 16px;
-margin:6px;
-border-radius:6px;
-font-size:14px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:768px){
-
-.hero h1{
-font-size:50px;
-}
-
-.nombre{
-font-size:14px;
-}
-
-button{
-font-size:15px;
-padding:12px 24px;
-}
-
-}
-/* ABOUT */
-
 .about{
-background-image:url("img/fondo2.png");
+background-image:url("img/fondo-beige.png");
 background-size:cover;
-background-position:center;
-padding:100px 20px;
-color:#111;
+padding:120px 20px;
 }
 
 .about-container{
-max-width:1200px;
-margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.about-img img{
-width:320px;
-max-width:100%;
-border-radius:20px;
-}
-
-.about-text h2{
-font-size:40px;
-margin-bottom:20px;
-}
-
-.about-text p{
-line-height:1.6;
-margin-bottom:30px;
-}
-
-/* CONTACT */
-
-.contact h3{
-font-size:28px;
-margin-top:30px;
-}
-
-.contact a{
-display:block;
-margin-top:10px;
-color:#000;
-text-decoration:none;
-font-size:18px;
-}
-
-.contact a:hover{
-text-decoration:underline;
-}
-.about-container{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:80px;
 max-width:1200px;
 margin:auto;
-flex-wrap:wrap;
+align-items:center;
+gap:100px;
+}
+.about-left{
+text-align:center;
 }
 
-/* SKILLS */
+.about-photo{
+width:320px;
+border-radius:20px;
+margin-bottom:40px;
+}
 
+.skills-title{
+margin-bottom:30px;
+font-size:32px;
+}
 .skills-icons{
 display:grid;
-grid-template-columns:repeat(4,60px);
-gap:20px;
+grid-template-columns:repeat(4,70px);
+gap:25px;
 justify-content:center;
-margin-top:30px;
 }
 
 .skills-icons img{
-width:50px;
-height:50px;
+width:60px;
+height:60px;
 object-fit:contain;
-background:none;
+}
+.about-right{
+text-align:left;
+max-width:500px;
+}
+
+.about-right h2{
+font-size:34px;
+margin-bottom:15px;
+}
+
+.about-right p{
+margin-bottom:40px;
+line-height:1.6;
+color:#333;
+}
+
+.about-right a{
+display:block;
+color:black;
+text-decoration:none;
+margin-top:10px;
+font-size:18px;
 }
 
 /* MOBILE */
@@ -293,6 +235,15 @@ text-align:center;
 
 .skills-icons{
 justify-content:center;
+}
+
+.about-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.about-right{
+text-align:center;
 }
 
 }
@@ -362,11 +313,12 @@ justify-content:center;
 
 <div class="about-container">
 
-<div class="about-img">
-<img src="img/foto.png" alt="Bryan Sangucho">
-<div class="skills">
+<!-- LADO IZQUIERDO -->
+<div class="about-left">
 
-<h2>HABILIDADES</h2>
+<img src="img/foto.png" class="about-photo">
+
+<h2 class="skills-title">HABILIDADES</h2>
 
 <div class="skills-icons">
 
@@ -380,12 +332,14 @@ justify-content:center;
 <img src="icons/premiere.png">
 
 </div>
-</div>
+
 </div>
 
-<div class="about-text">
 
-<h2>SOBRE MÍ</h2>
+<!-- LADO DERECHO -->
+<div class="about-right">
+
+<h2>Sobre mí</h2>
 
 <p>
 Soy desarrollador en formación con experiencia en diseño gráfico y branding.
@@ -393,15 +347,10 @@ Actualmente estudio Desarrollo de Aplicaciones Multiplataforma y me interesa
 crear soluciones digitales combinando programación, diseño y experiencia de usuario.
 </p>
 
-<div class="contact">
+<h2>Contacto</h2>
 
-<h2>CONTACTO</h2>
-
-<a href="tel:+34691812922">📞 +34 691 81 29 22</a>
-
-<a href="mailto:44alexis@hotmail.es">✉ 44alexis@hotmail.es</a>
-
-</div>
+<a href="tel:+34691812922">+34 691 81 29 22</a>
+<a href="mailto:44alexis@hotmail.es">44alexis@hotmail.es</a>
 
 </div>
 
