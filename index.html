@@ -188,10 +188,6 @@ margin:0 auto 40px auto;
 display:block;
 }
 
-.skills-title{
-text-align:left;
-margin-bottom:20px;
-}
 .skills-icons{
 display:grid;
 grid-template-columns:repeat(4,70px);
@@ -251,30 +247,34 @@ font-size:14px;
 letter-spacing:3px;
 }
 
-.skills-icons{
-display:grid;
-grid-template-columns:repeat(4,70px);
-gap:25px;
-justify-content:center;
-margin:auto;
-}
+/* layout columna única */
 
 .about-container{
 grid-template-columns:1fr;
 text-align:center;
 }
 
-.skills-icons{
-justify-content:center;
-}
-
-.about-container{
-grid-template-columns:1fr;
-text-align:center;
-}
+/* centrar texto derecha */
 
 .about-right{
 text-align:center;
+}
+
+/* centrar título habilidades */
+
+.about-left h2{
+text-align:center;
+}
+
+/* centrar iconos */
+
+.skills-icons{
+display:grid;
+grid-template-columns:repeat(4,60px);
+gap:20px;
+justify-content:center;
+justify-items:center;
+margin:25px auto;
 }
 
 }
