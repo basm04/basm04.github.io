@@ -177,29 +177,26 @@ gap:100px;
 .about-left{
 display:flex;
 flex-direction:column;
-align-items:left;
-text-align:left;
+align-items:flex-start;
 width:100%;
 }
 
 .about-photo{
 width:320px;
 border-radius:20px;
-margin-bottom:40px;
+margin:0 auto 40px auto;
+display:block;
 }
 
 .skills-title{
-margin-bottom:30px;
-font-size:32px;
+text-align:left;
+margin-bottom:20px;
 }
 .skills-icons{
 display:grid;
 grid-template-columns:repeat(4,70px);
-justify-content:center;
-justify-items:center;
 gap:25px;
-margin:30px auto;
-width:max-content;
+justify-content:flex-start;
 }
 
 .skills-icons img{
@@ -215,6 +212,7 @@ max-width:500px;
 .about-right h2{
 font-size:34px;
 margin-bottom:15px;
+text-align:left;
 color:#C31B4F;
 font-weight:900;
 }
